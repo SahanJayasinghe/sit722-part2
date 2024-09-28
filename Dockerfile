@@ -6,13 +6,13 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy the requirements.txt file into the container at /app
-COPY books_catalog/requirements.txt /app/
+COPY book_catalog/requirements.txt /app/
 
 # Install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code into the container
-COPY books_catalog /app
+COPY book_catalog /app
 
 # Set the environment variable for the config file
 ENV PYTHONPATH=/app
